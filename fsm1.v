@@ -9,6 +9,7 @@ module top_module(
 
     always @(*) begin    // This is a combinational always block
         // State transition logic
+        // next_stae = state~^in;
         case (state)
            A : next_state = in ? A : B ;
             B : next_state = in ? B : A ;
