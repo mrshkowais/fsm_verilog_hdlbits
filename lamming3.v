@@ -14,6 +14,7 @@ module top_module(
     // state transition
     always @(*) begin
         case(state)
+            // left : next_state = ground ? (dig ? dig_left : bump_left? right : left) : fall_left ;
             left : next_state = ~ground ? fall_l :
                 dig ? dig_l :
                 bump_left ? right : left ;
